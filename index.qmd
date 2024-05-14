@@ -1,10 +1,12 @@
 ---
 title: Apresentação explicando o código de TMB
 author: Beatriz Salles and Rafaely Reis
-slideNumber: 5
 format: 
-    html: default
+  html:
+    toc: true
+    code-fold: true
 transition: slide
+slideNumber: 5
 ---
 
 # Calculadora de TMB: Explicação do Código
