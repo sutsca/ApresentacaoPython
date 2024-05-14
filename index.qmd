@@ -1,12 +1,9 @@
 ---
 title: Apresentação explicando o código de TMB
 author: Beatriz Salles and Rafaely Reis
-format: 
-  html:
-    toc: true
-    code-fold: true
-transition: slide
 slideNumber: 5
+format: revealjs
+transition: slide
 ---
 
 # Calculadora de TMB: Explicação do Código
@@ -27,9 +24,11 @@ def calcular_tmb(peso, altura, idade, sexo):
     return tmb
 
 ```
+
 A função calcular_tmb calcula a Taxa de Metabolismo Basal (TMB) usando a equação de Harris-Benedict.
 
 ---
+
  ## Função `calcular_macronutrientes`
 ```{python}
  def calcular_macronutrientes(peso):
@@ -38,7 +37,9 @@ A função calcular_tmb calcula a Taxa de Metabolismo Basal (TMB) usando a equa�
     gord = 0.5 * peso
     return prot, carb, gord
 ```
+
 A função calcular_macronutrientes calcula a quantidade de proteína, carboidratos e gorduras em gramas com base no peso do usuário.
+
 ---
 
 ## Função `calcular_gasto_calorico`
