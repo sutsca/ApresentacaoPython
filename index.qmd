@@ -60,7 +60,6 @@ def calcular_gasto_calorico(exercicio, peso, tempo):
 
 A função calcular_gasto_calorico calcula o gasto calórico com base no tipo de exercício, peso do usuário e tempo de prática.
 
-
 ---
 
 ## Função `main`
