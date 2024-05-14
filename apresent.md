@@ -1,6 +1,6 @@
 ---
 theme: default
-slideNumber: true
+slideNumber: 5
 transition: slide
 ---
 
