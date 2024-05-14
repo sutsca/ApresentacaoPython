@@ -29,7 +29,7 @@ A função calcular_tmb calcula a Taxa de Metabolismo Basal (TMB) usando a equa�
 
 ---
 
- ## Função `calcular_macronutrientes`
+'' ## Função `calcular_macronutrientes`
 ```{python}
  def calcular_macronutrientes(peso):
     prot = 2 * peso 
@@ -57,6 +57,7 @@ def calcular_gasto_calorico(exercicio, peso, tempo):
         print("Exercício não reconhecido.")
         return None
 ```
+
 A função calcular_gasto_calorico calcula o gasto calórico com base no tipo de exercício, peso do usuário e tempo de prática.
 
 
