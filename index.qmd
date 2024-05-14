@@ -1,9 +1,10 @@
 ---
-title: Apresentação explicando o código de TMB
+title: Apresentação sobre o código de Taxa metabólica basal
 author: Beatriz Salles and Rafaely Reis
 slideNumber: 5
 format: revealjs
 transition: slide
+
 ---
 
 # Calculadora de TMB: Explicação do Código
@@ -11,7 +12,6 @@ transition: slide
 ---
 
 ## Função `calcular_tmb`
-
 
 def calcular_tmb(peso, altura, idade, sexo):
     if sexo == "masculino":
@@ -22,7 +22,6 @@ def calcular_tmb(peso, altura, idade, sexo):
         tmb = None
         print("Sexo não reconhecido.")
     return tmb
-
 
 
 A função calcular_tmb calcula a Taxa de Metabolismo Basal (TMB) usando a equação de Harris-Benedict.
