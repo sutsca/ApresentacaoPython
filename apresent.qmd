@@ -1,7 +1,12 @@
 ---
-theme: default
+title: Apresentação explicando o código de TMB
+author: Beatriz Salles and Rafaely Reis
 slideNumber: 5
+format: 
+  html:
+     theme: "Cyborg"
 transition: slide
+editor: visual
 ---
 
 # Calculadora de TMB: Explicação do Código
