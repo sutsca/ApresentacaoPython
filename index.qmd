@@ -29,7 +29,7 @@ A função calcular_tmb calcula a Taxa de Metabolismo Basal (TMB) usando a equa�
 
 ---
 
-'' ## Função `calcular_macronutrientes`
+## Função `calcular_macronutrientes`
 ```{python}
  def calcular_macronutrientes(peso):
     prot = 2 * peso 
