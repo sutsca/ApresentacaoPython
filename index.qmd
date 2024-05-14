@@ -3,10 +3,8 @@ title: Apresentação explicando o código de TMB
 author: Beatriz Salles and Rafaely Reis
 slideNumber: 5
 format: 
-  html:
-     theme: "Cyborg"
+    html: default
 transition: slide
-editor: visual
 ---
 
 # Calculadora de TMB: Explicação do Código
@@ -15,7 +13,7 @@ editor: visual
 
 ## Função `calcular_tmb`
 
-
+```{python}
 def calcular_tmb(peso, altura, idade, sexo):
     if sexo == "masculino":
         tmb = 66 + (13.7 * peso) + (5 * altura) - (6.8 * idade)
@@ -26,23 +24,24 @@ def calcular_tmb(peso, altura, idade, sexo):
         print("Sexo não reconhecido.")
     return tmb
 
-
+```
 A função calcular_tmb calcula a Taxa de Metabolismo Basal (TMB) usando a equação de Harris-Benedict.
 
 ---
  ## Função `calcular_macronutrientes`
-
+```{python}
  def calcular_macronutrientes(peso):
     prot = 2 * peso 
     carb = 3 * peso
     gord = 0.5 * peso
     return prot, carb, gord
-
+```
 A função calcular_macronutrientes calcula a quantidade de proteína, carboidratos e gorduras em gramas com base no peso do usuário.
 ---
 
 ## Função `calcular_gasto_calorico`
 
+```{python}
 def calcular_gasto_calorico(exercicio, peso, tempo):
     if exercicio == 1:
         return 3.5 * peso * tempo
@@ -54,7 +53,7 @@ def calcular_gasto_calorico(exercicio, peso, tempo):
     else:
         print("Exercício não reconhecido.")
         return None
-
+```
 A função calcular_gasto_calorico calcula o gasto calórico com base no tipo de exercício, peso do usuário e tempo de prática.
 
 
@@ -62,6 +61,7 @@ A função calcular_gasto_calorico calcula o gasto calórico com base no tipo de
 
 ## Função `main`
 
+```{python}
 def main():
     # Captura de dados do usuário
     peso = float(input("Digite seu peso (em kg): "))
@@ -102,5 +102,5 @@ def main():
 
 if __name__ == "__main__":
     main()
-
+```
 
