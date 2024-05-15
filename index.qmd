@@ -1,5 +1,5 @@
 ---
-title: Apresentação sobre o código de Taxa metabólica basal
+title: Apresentação sobre o código de taxa metabólica basal  (TMB)
 author: Beatriz Salles and Rafaely Reis
 slideNumber: 5
 format: revealjs
@@ -13,29 +13,30 @@ transition: slide
 
 ## Função `calcular_tmb`
 
-def calcular_tmb(peso, altura, idade, sexo):
-    if sexo == "masculino":
-        tmb = 66 + (13.7 * peso) + (5 * altura) - (6.8 * idade)
-    elif sexo == "feminino":
-        tmb = 665 + (9.6 * peso) + (1.8 * altura) - (4.7 * idade)
-    else:
-        tmb = None
-        print("Sexo não reconhecido.")
-    return tmb
+<div style="font-size: 0.8em;">
+def calcular_tmb(peso, altura, idade, sexo): <p>
+    if sexo == "masculino": <p>
+        tmb = 66 + (13.7 * peso) + (5 * altura) - (6.8 * idade) <p>
+    elif sexo == "feminino":<p>
+        tmb = 665 + (9.6 * peso) + (1.8 * altura) - (4.7 * idade)<p>
+    else: <p>
+        tmb = None <p>
+        print("Sexo não reconhecido.") <p>
+    return tmb <p>
+</div>
 
-
-A função calcular_tmb calcula a Taxa de Metabolismo Basal (TMB) usando a equação de Harris-Benedict.
+<p>A função calcular_tmb calcula a Taxa de Metabolismo Basal (TMB) usando a equação de Harris-Benedict.
 
 ---
 
 ## Função `calcular_macronutrientes`
 
- def calcular_macronutrientes(peso):
-    prot = 2 * peso 
-    carb = 3 * peso
-    gord = 0.5 * peso
-    return prot, carb, gord
-
+ def calcular_macronutrientes(peso): <p>
+    prot = 2 * peso <p>
+    carb = 3 * peso <p>
+    gord = 0.5 * peso <p>
+    return prot, carb, gord <p>
+<p>
 
 A função calcular_macronutrientes calcula a quantidade de proteína, carboidratos e gorduras em gramas com base no peso do usuário.
 
@@ -43,28 +44,28 @@ A função calcular_macronutrientes calcula a quantidade de proteína, carboidra
 
 ## Função `calcular_gasto_calorico`
 
-
-def calcular_gasto_calorico(exercicio, peso, tempo):
-    if exercicio == 1:
-        return 3.5 * peso * tempo
-    elif exercicio == 2:
-        return 6 * peso * tempo
-    elif exercicio == 3:
-        print("Saindo do programa!")
-        sys.exit()
-    else:
-        print("Exercício não reconhecido.")
-        return None
-
-
+<div style="font-size: 0.7em;">
+def calcular_gasto_calorico(exercicio, peso, tempo): <p>
+    if exercicio == 1: <p>
+        return 3.5 * peso * tempo <p>
+    elif exercicio == 2: <p>
+        return 6 * peso * tempo <p>
+    elif exercicio == 3: <p>
+        print("Saindo do programa!") <p>
+        sys.exit() <p>
+    else: <p>
+        print("Exercício não reconhecido.") <p>
+        return None <p>
+</div>
+<p>
 A função calcular_gasto_calorico calcula o gasto calórico com base no tipo de exercício, peso do usuário e tempo de prática.
 
 ---
 
 ## Função `main`
 
-
-def main():
+    #Main Vai fazer as perguntas ao usuario
+    def main():
     # Captura de dados do usuário
     peso = float(input("Digite seu peso (em kg): "))
     altura = float(input("Digite sua altura (em centimetros): "))
@@ -102,7 +103,11 @@ def main():
     else:
         print("Não foi possível calcular a TMB. Verifique os dados fornecidos.")
 
-if __name__ == "__main__":
+        if __name__ == "__main__":
     main()
+
+Nosso código irá fazer perguntas ao usuário relacionado ao seu peso, altura, idade e sexo. <p>
+Com base nisso irá calcular sua taxa metabólica basal<p>
+
 
 

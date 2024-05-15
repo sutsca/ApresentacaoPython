@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.4.554">
 
   <meta name="author" content="Beatriz Salles and Rafaely Reis">
-  <title>Apresentação explicando o código de TMB</title>
+  <title>Apresentação sobre o código de taxa metabólica basal (TMB)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -326,7 +326,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Apresentação explicando o código de TMB</h1>
+  <h1 class="title">Apresentação sobre o código de taxa metabólica basal (TMB)</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -344,23 +344,84 @@ Beatriz Salles and Rafaely Reis
 </section>
 <section id="função-calcular_tmb" class="slide level2">
 <h2>Função <code>calcular_tmb</code></h2>
-<p>def calcular_tmb(peso, altura, idade, sexo): if sexo == “masculino”: tmb = 66 + (13.7 * peso) + (5 * altura) - (6.8 * idade) elif sexo == “feminino”: tmb = 665 + (9.6 * peso) + (1.8 * altura) - (4.7 * idade) else: tmb = None print(“Sexo não reconhecido.”) return tmb</p>
-<p>A função calcular_tmb calcula a Taxa de Metabolismo Basal (TMB) usando a equação de Harris-Benedict.</p>
+<div style="font-size: 0.8em;">
+def calcular_tmb(peso, altura, idade, sexo):
+<p>
+if sexo == “masculino”:
+</p><p>
+tmb = 66 + (13.7 * peso) + (5 * altura) - (6.8 * idade)
+</p><p>
+elif sexo == “feminino”:
+</p><p>
+tmb = 665 + (9.6 * peso) + (1.8 * altura) - (4.7 * idade)
+</p><p>
+else:
+</p><p>
+tmb = None
+</p><p>
+print(“Sexo não reconhecido.”)
+</p><p>
+return tmb
+</p><p>
+</p></div>
+<p>
+</p><p>A função calcular_tmb calcula a Taxa de Metabolismo Basal (TMB) usando a equação de Harris-Benedict.</p>
 </section>
 <section id="função-calcular_macronutrientes" class="slide level2">
 <h2>Função <code>calcular_macronutrientes</code></h2>
-<p>def calcular_macronutrientes(peso): prot = 2 * peso carb = 3 * peso gord = 0.5 * peso return prot, carb, gord</p>
-<p>A função calcular_macronutrientes calcula a quantidade de proteína, carboidratos e gorduras em gramas com base no peso do usuário.</p>
+def calcular_macronutrientes(peso):
+<p>
+prot = 2 * peso
+</p><p>
+carb = 3 * peso
+</p><p>
+gord = 0.5 * peso
+</p><p>
+return prot, carb, gord
+</p><p>
+</p><p>
+</p><p>A função calcular_macronutrientes calcula a quantidade de proteína, carboidratos e gorduras em gramas com base no peso do usuário.</p>
 </section>
 <section id="função-calcular_gasto_calorico" class="slide level2">
 <h2>Função <code>calcular_gasto_calorico</code></h2>
-<p>def calcular_gasto_calorico(exercicio, peso, tempo): if exercicio == 1: return 3.5 * peso * tempo elif exercicio == 2: return 6 * peso * tempo elif exercicio == 3: print(“Saindo do programa!”) sys.exit() else: print(“Exercício não reconhecido.”) return None</p>
-<p>A função calcular_gasto_calorico calcula o gasto calórico com base no tipo de exercício, peso do usuário e tempo de prática.</p>
+<div style="font-size: 0.7em;">
+def calcular_gasto_calorico(exercicio, peso, tempo):
+<p>
+if exercicio == 1:
+</p><p>
+return 3.5 * peso * tempo
+</p><p>
+elif exercicio == 2:
+</p><p>
+return 6 * peso * tempo
+</p><p>
+elif exercicio == 3:
+</p><p>
+print(“Saindo do programa!”)
+</p><p>
+sys.exit()
+</p><p>
+else:
+</p><p>
+print(“Exercício não reconhecido.”)
+</p><p>
+return None
+</p><p>
+</p></div>
+<p>
+</p><p>A função calcular_gasto_calorico calcula o gasto calórico com base no tipo de exercício, peso do usuário e tempo de prática.</p>
 </section>
 <section id="função-main" class="slide level2">
 <h2>Função <code>main</code></h2>
-<p>def main(): # Captura de dados do usuário peso = float(input(“Digite seu peso (em kg):”)) altura = float(input(“Digite sua altura (em centimetros):”)) idade = float(input(“Digite sua idade:”)) sexo = input(“Digite seu sexo (masculino/feminino):”).lower()</p>
-<pre><code># Cálculo da TMB
+<pre><code>#Main Vai fazer as perguntas ao usuario
+def main():
+# Captura de dados do usuário
+peso = float(input("Digite seu peso (em kg): "))
+altura = float(input("Digite sua altura (em centimetros): "))
+idade = float(input("Digite sua idade: "))
+sexo = input("Digite seu sexo (masculino/feminino): ").lower()
+
+# Cálculo da TMB
 tmb = calcular_tmb(peso, altura, idade, sexo)
 
 if tmb is not None:
