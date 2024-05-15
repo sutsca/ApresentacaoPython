@@ -106,8 +106,10 @@ A função calcular_gasto_calorico calcula o gasto calórico com base no tipo de
         if __name__ == "__main__":
     main()
 
+<div style="font-size: 0.8em;">
 Nosso código irá fazer perguntas ao usuário relacionado ao seu peso, altura, idade e sexo. <p>
 Com base nisso irá calcular sua taxa metabólica basal<p>
 Retornando com a quantidade de macronutrientes que você precisa ingerir no dia. <p>
+</div>
 
 
